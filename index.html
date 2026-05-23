@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pranata Solusi Ahli – Jasa pembuatan website dan aplikasi profesional untuk bisnis Anda.">
+<meta property="og:title" content="Pranata Solusi Ahli – Jasa Website & Aplikasi Profesional">
+<title>Pranata Solusi Ahli – Jasa Website & Aplikasi Profesional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#FFFFFF;
+  --bg:#F7F6F2;
+  --bg2:#EFEDE7;
+  --ink:#111111;
+  --ink2:#3D3D3D;
+  --ink3:#888888;
+  --blue:#2563EB;
+  --blue2:#1D4ED8;
+  --blue-lt:#EEF3FD;
+  --green:#16A34A;
+  --green-lt:#EDFBF3;
+  --amber:#D97706;
+  --amber-lt:#FEF9EE;
+  --red:#DC2626;
+  --red-lt:#FEF2F2;
+  --yellow:#FCD34D;
+  --border:#E0DDD4;
+  --radius:12px;
+  --f:'DM Sans',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:16px;line-height:1.6;overflow-x:hidden}
+
+/* ─── DOT GRID PATTERN ─── */
+.dot-bg{
+  background-color:var(--bg);
+  background-image:radial-gradient(circle,#C8C4BB 1px,transparent 1px);
+  background-size:28px 28px;
+}
+.dot-bg-white{
+  background-color:var(--white);
+  background-image:radial-gradient(circle,#DDD9D0 1px,transparent 1px);
+  background-size:28px 28px;
+}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:var(--white);
+  border-bottom:2px solid var(--ink);
+  padding:0 5%;height:60px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{
+  width:34px;height:34px;
+  background:var(--blue);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:800;color:#fff;
+  border:2px solid var(--ink);
+}
+.logo-name{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:-.3px}
+.logo-sub{font-size:10px;font-weight:600;color:var(--blue);letter-spacing:1.5px;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{text-decoration:none;font-size:13px;font-weight:600;color:var(--ink2);transition:color .15s}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{
+  background:var(--ink)!important;color:#fff!important;
+  padding:8px 18px!important;border-radius:6px!important;
+  font-weight:700!important;font-size:13px!important;
+  border:2px solid var(--ink)!important;
+}
+.nav-cta:hover{background:var(--blue)!important;border-color:var(--blue)!important}
+
+/* ─── HERO ─── */
+#hero{
+  min-height:100vh;
+  padding:80px 5% 60px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  align-items:stretch;
+  border-bottom:2px solid var(--ink);
+  overflow:hidden;
+}
+.hero-left{
+  padding:60px 56px 60px 0;
+  display:flex;flex-direction:column;justify-content:center;
+  border-right:2px solid var(--ink);
+}
+.hero-right{
+  background:var(--blue);
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  padding:48px;
+  position:relative;
+  overflow:hidden;
+}
+/* grid lines on blue hero right */
+.hero-right::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+  background-size:36px 36px;
+}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--yellow);
+  color:var(--ink);
+  font-size:11px;font-weight:800;letter-spacing:.5px;
+  padding:5px 12px;border-radius:100px;
+  margin-bottom:24px;
+  border:2px solid var(--ink);
+  width:fit-content;
+}
+.badge-dot{width:6px;height:6px;background:var(--ink);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+
+h1{
+  font-size:clamp(40px,5vw,68px);
+  font-weight:800;line-height:1.05;letter-spacing:-2px;
+  color:var(--ink);margin-bottom:22px;
+}
+h1 .accent-blue{color:var(--blue)}
+h1 .accent-line{
+  display:inline-block;
+  background:var(--yellow);
+  padding:0 8px;
+  border-radius:4px;
+}
+
+.hero-sub{font-size:16px;color:var(--ink3);line-height:1.75;margin-bottom:36px;max-width:420px}
+
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
+.btn-solid{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--blue);color:#fff;
+  padding:13px 26px;border-radius:8px;
+  font-weight:700;font-size:14px;text-decoration:none;
+  border:2px solid var(--blue);
+  transition:background .15s,border-color .15s;
+}
+.btn-solid:hover{background:var(--blue2);border-color:var(--blue2)}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--white);color:var(--ink);
+  padding:13px 26px;border-radius:8px;
+  font-weight:700;font-size:14px;text-decoration:none;
+  border:2px solid var(--ink);
+  transition:background .15s;
+}
+.btn-outline:hover{background:var(--bg)}
+
+.hero-stats{display:flex;gap:36px;padding-top:36px;border-top:2px solid var(--ink)}
+.stat-num{font-size:32px;font-weight:800;letter-spacing:-1.5px;color:var(--ink);line-height:1}
+.stat-num span{color:var(--blue)}
+.stat-lbl{font-size:11px;color:var(--ink3);font-weight:600;margin-top:3px;text-transform:uppercase;letter-spacing:.5px}
+
+/* hero right content */
+.hero-visual-inner{position:relative;width:100%;max-width:360px;z-index:1}
+.device{
+  background:var(--white);border:2px solid var(--ink);
+  border-radius:14px;overflow:hidden;
+  box-shadow:8px 8px 0 var(--ink);
+  animation:bob 5s ease-in-out infinite;
+}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.dbar{
+  background:var(--bg);border-bottom:2px solid var(--ink);
+  padding:10px 14px;display:flex;align-items:center;gap:10px;
+}
+.ddots{display:flex;gap:5px}
+.ddots span{width:9px;height:9px;border-radius:50%}
+.ddots span:nth-child(1){background:#FF5F57}
+.ddots span:nth-child(2){background:#FFBD2E}
+.ddots span:nth-child(3){background:#28CA41}
+.durl{flex:1;background:var(--white);border:2px solid var(--border);border-radius:5px;padding:3px 10px;font-size:10px;color:var(--ink3)}
+.dbody{padding:18px}
+.db-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.db-logo-bar{width:80px;height:7px;background:var(--blue);border-radius:3px}
+.db-nav-b{display:flex;gap:5px}
+.db-nav-b span{width:24px;height:5px;background:var(--border);border-radius:3px}
+.db-hero-blk{
+  background:var(--blue-lt);border:2px solid #c7d9f9;
+  border-radius:9px;padding:16px;margin-bottom:12px;
+}
+.db-h1{width:65%;height:10px;background:var(--blue);border-radius:3px;margin-bottom:6px;opacity:.7}
+.db-h2{width:45%;height:10px;background:var(--blue);border-radius:3px;margin-bottom:12px;opacity:.4}
+.db-subs{display:flex;flex-direction:column;gap:4px;margin-bottom:12px}
+.db-subs span{height:4px;background:#c7d9f9;border-radius:3px}
+.db-btn{display:inline-block;background:var(--blue);color:#fff;font-size:9px;font-weight:700;padding:4px 12px;border-radius:4px}
+.db-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.db-c{background:var(--white);border:2px solid var(--border);border-radius:7px;padding:8px}
+.db-ic{width:18px;height:18px;border-radius:5px;margin-bottom:6px}
+.db-ic-b{background:var(--blue-lt);border:1.5px solid #c7d9f9}
+.db-ic-g{background:var(--green-lt);border:1.5px solid #bbf0d1}
+.db-ic-a{background:var(--amber-lt);border:1.5px solid #fde68a}
+.db-cl{height:4px;background:var(--border);border-radius:3px;margin-bottom:3px}
+.db-cl:last-child{width:55%}
+
+.chip{
+  position:absolute;
+  background:var(--white);border:2px solid var(--ink);
+  border-radius:10px;padding:9px 13px;
+  font-size:12px;font-weight:700;
+  display:flex;align-items:center;gap:8px;
+  box-shadow:4px 4px 0 var(--ink);
+  z-index:2;
+}
+.chip-1{bottom:-18px;left:-28px;animation:bob 5s ease-in-out infinite;animation-delay:-2s}
+.chip-2{top:8px;right:-20px;animation:bob 5s ease-in-out infinite;animation-delay:-3.5s}
+.ch-green{width:8px;height:8px;background:#28CA41;border-radius:50%}
+
+/* ─── MARQUEE ─── */
+#marquee{
+  background:var(--ink);
+  border-bottom:2px solid var(--ink);
+  padding:18px 0;overflow:hidden;
+}
+.mq-track{display:flex;gap:0;width:max-content;animation:mq 24s linear infinite}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mq-item{
+  font-size:13px;font-weight:700;color:rgba(255,255,255,.5);
+  white-space:nowrap;padding:0 32px;
+  border-right:1px solid rgba(255,255,255,.1);
+  letter-spacing:.3px;
+}
+.mq-item.accent{color:var(--yellow);font-size:14px}
+
+/* ─── SECTION LAYOUT ─── */
+.sw{max-width:1200px;margin:0 auto;padding:0 5%}
+.section-lbl{
+  display:inline-block;font-size:11px;font-weight:800;
+  letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--blue);margin-bottom:14px;
+}
+.section-h{
+  font-size:clamp(30px,3.8vw,48px);font-weight:800;
+  letter-spacing:-1.5px;line-height:1.08;margin-bottom:16px;
+}
+.section-h .hl{background:var(--yellow);padding:0 6px;border-radius:3px}
+.section-p{font-size:15px;color:var(--ink3);line-height:1.75;max-width:460px}
+
+/* ─── LAYANAN ─── */
+#layanan{padding:100px 0;background:var(--bg)}
+.lay-top{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:48px;align-items:end;margin-bottom:56px;
+}
+.lay-top .section-p{max-width:100%}
+.lay-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  border:2px solid var(--ink);
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.svc{
+  padding:32px 28px;
+  border-right:2px solid var(--ink);
+  border-bottom:2px solid var(--ink);
+  background:var(--white);
+  transition:background .2s;
+  position:relative;
+  overflow:hidden;
+}
+.svc:nth-child(3),.svc:nth-child(6){border-right:none}
+.svc:nth-child(4),.svc:nth-child(5),.svc:nth-child(6){border-bottom:none}
+.svc:hover{background:var(--blue-lt)}
+.svc:nth-child(1){background:var(--blue);color:#fff}
+.svc:nth-child(1):hover{background:var(--blue2)}
+.svc-no{
+  position:absolute;top:16px;right:20px;
+  font-size:48px;font-weight:800;color:rgba(0,0,0,.04);
+  line-height:1;letter-spacing:-2px;
+  pointer-events:none;user-select:none;
+}
+.svc:nth-child(1) .svc-no{color:rgba(255,255,255,.08)}
+.svc-ic{font-size:28px;margin-bottom:18px;display:block}
+.svc h3{font-size:17px;font-weight:700;margin-bottom:10px;letter-spacing:-.3px}
+.svc:nth-child(1) h3{color:#fff}
+.svc p{font-size:13px;color:var(--ink3);line-height:1.7;margin-bottom:16px}
+.svc:nth-child(1) p{color:rgba(255,255,255,.7)}
+.tag-wrap{display:flex;flex-wrap:wrap;gap:5px}
+.tag{
+  font-size:10px;font-weight:700;letter-spacing:.5px;
+  padding:3px 8px;border-radius:100px;border:1.5px solid;
+}
+.tag-b{background:var(--blue-lt);color:var(--blue);border-color:#c7d9f9}
+.tag-g{background:var(--green-lt);color:var(--green);border-color:#bbf0d1}
+.tag-a{background:var(--amber-lt);color:var(--amber);border-color:#fde68a}
+.tag-w{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.3)}
+
+/* ─── NUMBERS BAND ─── */
+#numbers{
+  background:var(--yellow);
+  border-top:2px solid var(--ink);
+  border-bottom:2px solid var(--ink);
+  padding:48px 5%;
+}
+.num-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:0;
+}
+.num-item{
+  padding:24px 32px;
+  border-right:2px solid var(--ink);
+  text-align:center;
+}
+.num-item:last-child{border-right:none}
+.num-big{font-size:52px;font-weight:800;letter-spacing:-2px;line-height:1;color:var(--ink)}
+.num-big span{color:var(--blue)}
+.num-lbl{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--ink2);margin-top:6px}
+
+/* ─── PROSES ─── */
+#proses{
+  background:var(--ink);
+  border-bottom:2px solid var(--ink);
+  padding:100px 0;
+}
+#proses .section-lbl{color:var(--yellow)}
+#proses .section-h{color:#fff}
+#proses .section-h .hl{background:var(--blue);color:#fff}
+#proses .section-p{color:rgba(255,255,255,.5)}
+.proses-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:72px;align-items:start;margin-top:52px}
+.step-grid{display:flex;flex-direction:column;gap:0}
+.step{
+  display:flex;gap:20px;
+  padding:22px 0;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.step:last-child{border-bottom:none}
+.step-n{
+  width:32px;height:32px;
+  background:var(--yellow);
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;color:var(--ink);
+  flex-shrink:0;margin-top:2px;
+}
+.step h4{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
+.step p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6}
+
+.tracker{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--radius);
+  padding:28px;
+}
+.tracker-lbl{
+  font-size:10px;font-weight:800;letter-spacing:2px;
+  text-transform:uppercase;color:rgba(255,255,255,.35);
+  margin-bottom:18px;
+}
+.trow{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:11px 14px;border-radius:8px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  margin-bottom:8px;font-size:13px;font-weight:600;color:#fff;
+}
+.bdg{
+  font-size:10px;font-weight:800;padding:3px 10px;
+  border-radius:100px;border:1.5px solid;
+}
+.bdg-ok{background:rgba(22,163,74,.15);color:#4ade80;border-color:rgba(74,222,128,.3)}
+.bdg-on{background:rgba(37,99,235,.2);color:#93c5fd;border-color:rgba(147,197,253,.3)}
+.bdg-q{background:rgba(255,255,255,.05);color:rgba(255,255,255,.3);border-color:rgba(255,255,255,.1)}
+.prog-wrap{margin-top:20px}
+.prog-lbl{display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:rgba(255,255,255,.4);margin-bottom:8px}
+.prog-lbl span:last-child{color:var(--yellow)}
+.prog-bar{height:6px;background:rgba(255,255,255,.1);border-radius:100px;overflow:hidden}
+.prog-fill{height:100%;background:var(--yellow);border-radius:100px;width:60%}
+
+/* ─── PORTOFOLIO ─── */
+#porto{padding:100px 0;background:var(--bg)}
+.porto-top{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  margin-bottom:44px;flex-wrap:wrap;gap:16px;
+}
+.porto-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  border:2px solid var(--ink);
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.pc{
+  background:var(--white);
+  border-right:2px solid var(--ink);
+  border-bottom:2px solid var(--ink);
+  transition:background .2s;
+  cursor:pointer;
+  position:relative;
+}
+.pc:nth-child(3),.pc:nth-child(6){border-right:none}
+.pc:nth-child(4),.pc:nth-child(5),.pc:nth-child(6){border-bottom:none}
+.pc:hover{background:var(--blue-lt)}
+.pc:hover .pc-thumb{filter:brightness(.97)}
+.pc:hover .pc-view-hint{opacity:1;transform:translateY(0)}
+.pc-thumb{
+  height:164px;display:flex;align-items:center;justify-content:center;
+  border-bottom:2px solid var(--ink);
+  transition:filter .2s;
+  position:relative;overflow:hidden;
+}
+.pc-view-hint{
+  position:absolute;inset:0;
+  background:rgba(37,99,235,.85);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:13px;font-weight:700;letter-spacing:.5px;
+  gap:8px;
+  opacity:0;transform:translateY(6px);
+  transition:opacity .2s,transform .2s;
+}
+.pt1{background:#EEF3FD}.pt2{background:#EDFBF3}.pt3{background:#FEF9EE}
+.pt4{background:#FEF2F2}.pt5{background:#EDFBF3}.pt6{background:#EEF3FD}
+
+.mb2{
+  width:68%;background:var(--white);
+  border:2px solid var(--ink);border-radius:10px;overflow:hidden;
+  box-shadow:4px 4px 0 var(--ink);
+}
+.mb2-bar{background:var(--bg);border-bottom:2px solid var(--ink);padding:7px 10px;display:flex;gap:4px}
+.mb2-d{width:6px;height:6px;border-radius:50%}
+.mb2-body{padding:10px;display:flex;flex-direction:column;gap:4px}
+.mb2-la{height:5px;background:var(--blue);border-radius:3px;opacity:.5;width:38%}
+.mb2-l{height:4px;background:var(--border);border-radius:3px}
+.mb2-blk{height:28px;background:var(--bg);border-radius:5px;margin-top:3px}
+
+.pc-info{padding:18px 20px}
+.pc-cat{font-size:10px;font-weight:800;color:var(--blue);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.pc-info h3{font-size:14px;font-weight:700;margin-bottom:4px}
+.pc-info p{font-size:12px;color:var(--ink3);line-height:1.5}
+
+/* ─── MODAL ─── */
+.modal-overlay{
+  position:fixed;inset:0;z-index:999;
+  background:rgba(0,0,0,.55);
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;
+  opacity:0;pointer-events:none;
+  transition:opacity .25s;
+}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal-box{
+  background:var(--white);
+  border:2px solid var(--ink);
+  border-radius:20px;
+  width:100%;max-width:820px;
+  max-height:90vh;
+  overflow-y:auto;
+  box-shadow:10px 10px 0 var(--ink);
+  transform:translateY(18px) scale(.98);
+  transition:transform .28s cubic-bezier(.2,0,.2,1);
+}
+.modal-overlay.open .modal-box{transform:none}
+
+/* gallery */
+.mg{
+  position:relative;
+  border-bottom:2px solid var(--ink);
+  overflow:hidden;
+  border-radius:18px 18px 0 0;
+}
+.mg-track{
+  display:flex;transition:transform .38s cubic-bezier(.4,0,.2,1);
+}
+.mg-slide{
+  min-width:100%;height:340px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:600;color:var(--ink3);
+  flex-direction:column;gap:10px;
+  background:var(--bg);
+  position:relative;overflow:hidden;
+}
+.mg-slide img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;
+}
+/* placeholder screens when no real image */
+.ms-1{background:#EEF3FD}.ms-2{background:#E8F0FD}.ms-3{background:#DDE8FC}
+.ms-4{background:#EDFBF3}.ms-5{background:#E5F9EE}.ms-6{background:#DDFAEA}
+.ms-7{background:#FEF9EE}.ms-8{background:#FDF4E0}.ms-9{background:#FCF0D3}
+.ms-10{background:#FEF2F2}.ms-11{background:#FDE8E8}.ms-12{background:#FCDCDC}
+.ms-13{background:#F0FDF4}.ms-14{background:#E4FAEC}.ms-15{background:#D8F7E5}
+.ms-16{background:#EEF3FD}.ms-17{background:#E8F0FD}.ms-18{background:#DDE8FC}
+
+.mg-mock{
+  width:72%;max-width:340px;
+  background:var(--white);border:2px solid var(--ink);
+  border-radius:12px;overflow:hidden;
+  box-shadow:6px 6px 0 var(--ink);
+  position:relative;z-index:1;
+}
+.mg-mock-bar{background:var(--bg);border-bottom:2px solid var(--ink);padding:8px 12px;display:flex;align-items:center;gap:8px}
+.mg-mock-dots{display:flex;gap:4px}
+.mg-mock-dots span{width:8px;height:8px;border-radius:50%}
+.mg-mock-url{flex:1;background:var(--white);border:1.5px solid var(--border);border-radius:4px;height:18px;margin-left:4px}
+.mg-mock-body{padding:16px;display:flex;flex-direction:column;gap:6px}
+.mg-mock-h1{height:12px;background:var(--blue);border-radius:3px;width:60%;opacity:.7}
+.mg-mock-h2{height:9px;background:var(--border);border-radius:3px;width:80%}
+.mg-mock-h3{height:9px;background:var(--border);border-radius:3px;width:65%}
+.mg-mock-blk{height:48px;background:var(--bg);border-radius:8px;margin-top:4px}
+.mg-mock-row{display:flex;gap:6px;margin-top:4px}
+.mg-mock-c{flex:1;height:36px;background:var(--bg);border-radius:6px}
+.mg-mock-c:first-child{background:var(--blue-lt)}
+
+.mg-nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:38px;height:38px;border-radius:50%;
+  background:var(--white);border:2px solid var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:16px;font-weight:700;
+  z-index:10;box-shadow:3px 3px 0 var(--ink);
+  transition:background .15s;user-select:none;
+}
+.mg-nav:hover{background:var(--yellow)}
+.mg-prev{left:14px}
+.mg-next{right:14px}
+.mg-dots{
+  position:absolute;bottom:14px;left:50%;transform:translateX(-50%);
+  display:flex;gap:6px;z-index:10;
+}
+.mg-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:rgba(0,0,0,.2);border:1.5px solid rgba(0,0,0,.25);
+  cursor:pointer;transition:background .2s,transform .2s;
+}
+.mg-dot.active{background:var(--blue);border-color:var(--blue);transform:scale(1.2)}
+.mg-count{
+  position:absolute;top:14px;right:14px;
+  background:rgba(0,0,0,.45);color:#fff;
+  font-size:11px;font-weight:700;
+  padding:3px 10px;border-radius:100px;z-index:10;
+  letter-spacing:.5px;
+}
+
+/* modal body */
+.mb{padding:32px 36px 36px}
+.mb-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:24px}
+.mb-cat{font-size:10px;font-weight:800;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.mb-title{font-size:26px;font-weight:800;letter-spacing:-.5px;line-height:1.1}
+.mb-close{
+  width:38px;height:38px;border-radius:9px;
+  border:2px solid var(--ink);background:var(--bg);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:16px;flex-shrink:0;
+  transition:background .15s;margin-top:2px;
+}
+.mb-close:hover{background:var(--red-lt)}
+.mb-desc{font-size:14px;color:var(--ink2);line-height:1.8;margin-bottom:28px}
+
+.mb-meta{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px}
+.mm-block{background:var(--bg);border:2px solid var(--border);border-radius:12px;padding:18px 20px}
+.mm-lbl{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--ink3);margin-bottom:12px}
+
+.tech-stack{display:flex;flex-wrap:wrap;gap:7px}
+.tech-tag{
+  font-size:12px;font-weight:700;
+  padding:5px 12px;border-radius:8px;
+  border:2px solid var(--ink);
+  background:var(--white);color:var(--ink);
+  letter-spacing:.3px;
+}
+.tech-tag.blue{background:var(--blue-lt);border-color:#c7d9f9;color:var(--blue)}
+.tech-tag.green{background:var(--green-lt);border-color:#bbf0d1;color:var(--green)}
+.tech-tag.amber{background:var(--amber-lt);border-color:#fde68a;color:var(--amber)}
+.tech-tag.ink{background:var(--ink);border-color:var(--ink);color:#fff}
+.tech-tag.yellow{background:var(--yellow);border-color:#e6b800;color:var(--ink)}
+
+.mb-url-row{
+  display:flex;align-items:center;gap:12px;
+  background:var(--bg);border:2px solid var(--border);border-radius:12px;
+  padding:14px 18px;margin-bottom:28px;
+}
+.mb-url-ic{font-size:18px;flex-shrink:0}
+.mb-url-info{flex:1;min-width:0}
+.mb-url-lbl{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--ink3);margin-bottom:2px}
+.mb-url-val{font-size:13px;font-weight:600;color:var(--blue);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn-visit{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--blue);color:#fff;
+  padding:9px 18px;border-radius:8px;
+  font-weight:700;font-size:13px;text-decoration:none;
+  border:2px solid var(--blue);white-space:nowrap;
+  transition:background .15s;flex-shrink:0;
+}
+.btn-visit:hover{background:var(--blue2)}
+.mb-url-row.no-url .mb-url-val{color:var(--ink3);font-style:italic}
+.mb-url-row.no-url .btn-visit{display:none}
+
+.mb-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-top:24px;border-top:2px solid var(--border)}
+.mb-year{font-size:12px;color:var(--ink3);font-weight:600}
+.btn-cta-modal{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--ink);color:#fff;
+  padding:11px 22px;border-radius:8px;
+  font-weight:700;font-size:13px;text-decoration:none;
+  border:2px solid var(--ink);transition:background .15s;
+}
+.btn-cta-modal:hover{background:var(--blue);border-color:var(--blue)}
+
+@media(max-width:600px){
+  .mb{padding:20px 20px 24px}
+  .mb-meta{grid-template-columns:1fr}
+  .mg-slide{height:220px}
+  .mg-mock{width:82%}
+  .mb-title{font-size:20px}
+}
+
+/* ─── HARGA ─── */
+#harga{
+  background:var(--bg2);
+  border-top:2px solid var(--ink);
+  border-bottom:2px solid var(--ink);
+  padding:100px 0;
+}
+.dot-bg2{
+  background-color:var(--bg2);
+  background-image:radial-gradient(circle,#C0BDB4 1px,transparent 1px);
+  background-size:28px 28px;
+}
+#harga.dot-bg2{background-color:var(--bg2)}
+.harga-top{text-align:center;margin-bottom:56px}
+.harga-top .section-p{margin:0 auto}
+.harga-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:0;border:2px solid var(--ink);border-radius:var(--radius);overflow:hidden;
+}
+.hcard{
+  background:var(--white);
+  border-right:2px solid var(--ink);
+  padding:36px 30px;
+  position:relative;
+}
+.hcard:last-child{border-right:none}
+.hcard.mid{background:var(--blue);color:#fff}
+.pop-lbl{
+  position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  background:var(--yellow);color:var(--ink);
+  font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+  padding:4px 14px;border-radius:0 0 8px 8px;
+  border:2px solid var(--ink);border-top:none;
+  white-space:nowrap;
+}
+.hplan{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--ink3);margin-bottom:10px}
+.hcard.mid .hplan{color:rgba(255,255,255,.6)}
+.hprice{font-size:42px;font-weight:800;letter-spacing:-2px;line-height:1;margin-bottom:4px}
+.hprice small{font-size:18px;font-weight:500;opacity:.55}
+.hnote{font-size:12px;color:var(--ink3);margin-bottom:24px}
+.hcard.mid .hnote{color:rgba(255,255,255,.55)}
+.hdivider{height:2px;background:var(--border);margin-bottom:22px}
+.hcard.mid .hdivider{background:rgba(255,255,255,.2)}
+.hfeats{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:28px}
+.hf{font-size:13px;color:var(--ink2);display:flex;align-items:flex-start;gap:8px}
+.hf::before{content:'✓';font-weight:800;font-size:11px;color:var(--green);flex-shrink:0;margin-top:2px}
+.hcard.mid .hf{color:rgba(255,255,255,.85)}
+.hcard.mid .hf::before{color:var(--yellow)}
+.mf{opacity:.3}
+.mf::before{content:'–'!important;color:var(--ink3)!important}
+.btn-hp{
+  display:block;text-align:center;padding:12px;border-radius:8px;
+  font-weight:700;font-size:14px;text-decoration:none;transition:all .15s;
+  border:2px solid;
+}
+.btn-hp-dk{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn-hp-dk:hover{background:var(--blue);border-color:var(--blue)}
+.btn-hp-wh{background:#fff;color:var(--blue);border-color:rgba(255,255,255,.6)}
+.btn-hp-wh:hover{background:#f0f4ff}
+.btn-hp-ol{background:transparent;color:var(--ink);border-color:var(--border)}
+.btn-hp-ol:hover{border-color:var(--ink)}
+
+/* ─── TESTI ─── */
+#testi{padding:100px 0;background:var(--white)}
+.dot-bg-white{background-color:var(--white);background-image:radial-gradient(circle,#DDD9D0 1px,transparent 1px);background-size:28px 28px}
+#testi.dot-bg-white{}
+.testi-top{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:16px}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--ink);border-radius:var(--radius);overflow:hidden}
+.tc{
+  background:var(--white);padding:28px;
+  border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);
+  transition:background .2s;
+}
+.tc:nth-child(3),.tc:nth-child(6){border-right:none}
+.tc:nth-child(4),.tc:nth-child(5),.tc:nth-child(6){border-bottom:none}
+.tc:hover{background:var(--bg)}
+.tc:nth-child(2){background:var(--blue);color:#fff}
+.tc:nth-child(2):hover{background:var(--blue2)}
+.tc:nth-child(5){background:var(--yellow)}
+.tc:nth-child(5):hover{background:#f5c600}
+
+.tc-stars{font-size:12px;letter-spacing:2px;margin-bottom:14px}
+.tc:nth-child(2) .tc-stars{color:var(--yellow)}
+.tc:not(:nth-child(2)) .tc-stars{color:var(--amber)}
+.tc:nth-child(5) .tc-stars{color:var(--ink)}
+.tc-q{font-size:13px;line-height:1.75;margin-bottom:20px}
+.tc:nth-child(2) .tc-q{color:rgba(255,255,255,.8)}
+.tc:nth-child(5) .tc-q{color:var(--ink)}
+.tc:not(:nth-child(2)):not(:nth-child(5)) .tc-q{color:var(--ink2)}
+.tc-author{display:flex;align-items:center;gap:10px}
+.tc-av{
+  width:36px;height:36px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:12px;border:2px solid var(--ink);flex-shrink:0;
+}
+.av-b{background:var(--blue-lt);color:var(--blue)}
+.av-g{background:var(--green-lt);color:var(--green)}
+.av-a{background:var(--amber-lt);color:var(--amber)}
+.av-r{background:var(--red-lt);color:var(--red)}
+.av-w{background:#fff;color:var(--blue)}
+.av-dk{background:var(--ink);color:var(--yellow)}
+.tc-name{font-size:13px;font-weight:700}
+.tc:nth-child(2) .tc-name{color:#fff}
+.tc-role{font-size:11px;color:var(--ink3)}
+.tc:nth-child(2) .tc-role{color:rgba(255,255,255,.5)}
+.tc:nth-child(5) .tc-role{color:var(--ink3)}
+
+/* ─── FAQ ─── */
+#faq{
+  background:var(--bg);
+  border-top:2px solid var(--ink);
+  border-bottom:2px solid var(--ink);
+  padding:100px 0;
+}
+.faq-layout{display:grid;grid-template-columns:1fr 1.8fr;gap:80px;align-items:start}
+.faq-list{margin-top:8px}
+.faq-item{border-bottom:2px solid var(--border)}
+.faq-q{
+  width:100%;background:none;border:none;
+  color:var(--ink);font-family:var(--f);font-size:14px;font-weight:700;
+  text-align:left;padding:18px 0;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  transition:color .15s;
+}
+.faq-q:hover{color:var(--blue)}
+.faq-plus{
+  width:26px;height:26px;border-radius:6px;
+  background:var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:400;color:var(--ink3);
+  transition:transform .25s,background .2s,color .2s;flex-shrink:0;
+}
+.faq-item.open .faq-plus{transform:rotate(45deg);background:var(--blue);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a-inner{font-size:14px;color:var(--ink3);line-height:1.75;padding-bottom:18px}
+.faq-item.open .faq-a{max-height:180px}
+
+/* ─── CTA ─── */
+#cta{
+  background:var(--blue);
+  border-bottom:2px solid var(--ink);
+  padding:0;overflow:hidden;
+}
+.cta-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1fr auto;
+  align-items:stretch;gap:0;
+}
+.cta-text{padding:64px 5%;border-right:2px solid rgba(255,255,255,.15)}
+.cta-text h2{font-size:clamp(28px,3.5vw,44px);font-weight:800;color:#fff;letter-spacing:-1px;line-height:1.1;margin-bottom:10px}
+.cta-text p{font-size:16px;color:rgba(255,255,255,.7)}
+.cta-action{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:40px 48px;gap:12px;
+  background:rgba(255,255,255,.07);
+}
+.btn-cta-w{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--white);color:var(--blue);
+  padding:14px 28px;border-radius:8px;
+  font-weight:800;font-size:15px;text-decoration:none;
+  border:2px solid var(--white);
+  transition:background .15s;white-space:nowrap;
+}
+.btn-cta-w:hover{background:#f0f4ff}
+.cta-note{font-size:12px;color:rgba(255,255,255,.5);text-align:center}
+
+/* ─── KONTAK ─── */
+#kontak{padding:100px 0;background:var(--bg)}
+.kontak-wrap{
+  background:var(--white);border:2px solid var(--ink);
+  border-radius:20px;overflow:hidden;
+  display:grid;grid-template-columns:1fr 1.4fr;
+  box-shadow:8px 8px 0 var(--ink);
+}
+.kontak-l{
+  padding:52px 44px;
+  background:var(--ink);color:#fff;
+  position:relative;overflow:hidden;
+}
+.kontak-l::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+.kontak-l>*{position:relative;z-index:1}
+.kontak-l h2{font-size:32px;font-weight:800;letter-spacing:-1px;line-height:1.15;margin-bottom:12px}
+.kontak-l h2 em{font-style:italic;color:var(--yellow)}
+.kontak-l>p{font-size:14px;line-height:1.7;color:rgba(255,255,255,.6);margin-bottom:36px}
+.ki-list{display:flex;flex-direction:column;gap:18px}
+.ki{display:flex;align-items:flex-start;gap:12px}
+.ki-ic{
+  width:36px;height:36px;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);border-radius:9px;
+  display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;
+}
+.ki-lbl{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:2px}
+.ki-val{font-size:13px;font-weight:600;color:#fff}
+
+.kontak-r{padding:52px 44px}
+.kontak-r h3{font-size:20px;font-weight:800;margin-bottom:28px;letter-spacing:-.3px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.fg label{font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink3)}
+.fg input,.fg select,.fg textarea{
+  background:var(--bg);border:2px solid var(--border);border-radius:8px;
+  padding:11px 14px;color:var(--ink);font-family:var(--f);font-size:14px;outline:none;
+  transition:border-color .15s,background .15s;-webkit-appearance:none;
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);background:var(--white)}
+.fg textarea{resize:vertical;min-height:100px}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--ink3);opacity:.5}
+.btn-send{
+  width:100%;padding:13px;
+  background:var(--blue);color:#fff;border:2px solid var(--blue);
+  border-radius:8px;font-family:var(--f);font-size:14px;font-weight:700;
+  cursor:pointer;transition:background .15s,border-color .15s;
+}
+.btn-send:hover{background:var(--blue2);border-color:var(--blue2)}
+
+/* ─── FOOTER ─── */
+footer{
+  background:var(--ink);
+  border-top:2px solid var(--ink);
+  padding:64px 5% 32px;
+}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:48px;margin-bottom:48px;
+  padding-bottom:48px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.fbrand p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.75;margin:14px 0 20px;max-width:240px}
+.fsoc{display:flex;gap:8px}
+.fsoc a{
+  width:34px;height:34px;border:1px solid rgba(255,255,255,.1);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;font-size:13px;
+  text-decoration:none;color:rgba(255,255,255,.4);transition:background .15s,color .15s;
+}
+.fsoc a:hover{background:rgba(255,255,255,.08);color:#fff}
+.fcol h4{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.3);margin-bottom:16px}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fcol ul a{font-size:13px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .15s}
+.fcol ul a:hover{color:#fff}
+.fbot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.fcopy{font-size:12px;color:rgba(255,255,255,.3)}
+.fcopy a{color:var(--yellow);text-decoration:none}
+.fleg{display:flex;gap:20px}
+.fleg a{font-size:12px;color:rgba(255,255,255,.3);text-decoration:none;transition:color .15s}
+.fleg a:hover{color:#fff}
+
+/* ─── WA ─── */
+.wa{
+  position:fixed;bottom:28px;right:28px;
+  width:52px;height:52px;background:#25D366;
+  border:2px solid var(--ink);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;z-index:999;text-decoration:none;
+  box-shadow:4px 4px 0 var(--ink);
+  transition:transform .15s;
+}
+.wa:hover{transform:scale(1.08)}
+
+/* ─── REVEAL ─── */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  #hero{grid-template-columns:1fr}
+  .hero-right{display:none}
+  .lay-top{grid-template-columns:1fr}
+  .lay-grid,.testi-grid,.porto-grid,.harga-grid{grid-template-columns:1fr 1fr}
+  .lay-grid .svc:nth-child(2),.lay-grid .svc:nth-child(4){border-right:none}
+  .lay-grid .svc:nth-child(3){border-right:2px solid var(--ink)}
+  .proses-layout,.faq-layout{grid-template-columns:1fr}
+  .kontak-wrap{grid-template-columns:1fr}
+  .num-inner{grid-template-columns:repeat(2,1fr)}
+  .num-item:nth-child(2){border-right:none}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .cta-inner{grid-template-columns:1fr}
+  .cta-action{border-top:2px solid rgba(255,255,255,.15)}
+  .nav-links{display:none}
+}
+@media(max-width:600px){
+  .lay-grid,.testi-grid,.porto-grid,.harga-grid{grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .num-inner{grid-template-columns:1fr 1fr}
+  .hero-stats{flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo">
+    <div class="logo-mark">P</div>
+    <div>
+      <div class="logo-name">Pranata Solusi Ahli</div>
+      <div class="logo-sub">Digital Solutions</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#layanan">Layanan</a></li>
+    <li><a href="#porto">Portofolio</a></li>
+    <li><a href="#harga">Harga</a></li>
+    <li><a href="#testi">Testimoni</a></li>
+    <li><a href="#kontak" class="nav-cta">Konsultasi Gratis →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="dot-bg" style="padding-top:60px;border-bottom:2px solid var(--ink)">
+  <div style="max-width:1200px;margin:0 auto">
+    <section id="hero">
+      <div class="hero-left">
+        <div class="hero-badge"><span class="badge-dot"></span>Tersedia untuk proyek baru</div>
+        <h1>Bisnis Anda<br>Lebih <span class="accent-line">Kuat</span><br>di <span class="accent-blue">Digital</span></h1>
+        <p class="hero-sub">Kami merancang dan membangun website serta aplikasi yang tidak hanya indah — tapi juga bekerja keras untuk pertumbuhan bisnis Anda.</p>
+        <div class="hero-btns">
+          <a href="#kontak" class="btn-solid">Mulai Proyek Sekarang →</a>
+          <a href="#porto" class="btn-outline">Lihat Portofolio</a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="stat-num">120<span>+</span></div><div class="stat-lbl">Proyek Selesai</div></div>
+          <div><div class="stat-num">5<span>★</span></div><div class="stat-lbl">Rating Klien</div></div>
+          <div><div class="stat-num">3<span>th</span></div><div class="stat-lbl">Pengalaman</div></div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-visual-inner">
+          <div class="device">
+            <div class="dbar"><div class="ddots"><span></span><span></span><span></span></div><div class="durl">pranatasolusi.id</div></div>
+            <div class="dbody">
+              <div class="db-top"><div class="db-logo-bar"></div><div class="db-nav-b"><span></span><span></span><span></span></div></div>
+              <div class="db-hero-blk">
+                <div class="db-h1"></div><div class="db-h2"></div>
+                <div class="db-subs"><span style="width:90%"></span><span style="width:75%"></span><span style="width:55%"></span></div>
+                <div class="db-btn">Konsultasi Gratis →</div>
+              </div>
+              <div class="db-cards">
+                <div class="db-c"><div class="db-ic db-ic-b"></div><div class="db-cl"></div><div class="db-cl"></div></div>
+                <div class="db-c"><div class="db-ic db-ic-g"></div><div class="db-cl"></div><div class="db-cl"></div></div>
+                <div class="db-c"><div class="db-ic db-ic-a"></div><div class="db-cl"></div><div class="db-cl"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="chip chip-1"><span class="ch-green"></span><span>pranatasolusi.id — Live</span></div>
+          <div class="chip chip-2">
+            <span style="font-size:15px">🚀</span>
+            <div><div style="font-size:12px;font-weight:700;color:var(--ink)">Deploy Selesai</div><div style="font-size:10px;color:var(--ink3)">2 detik lalu</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div id="marquee">
+  <div class="mq-track">
+    <span class="mq-item">TokoBaju.co</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">MedikaCare</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">GreenFarm Indonesia</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">Arsitek Muda</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">KulinerJogja</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">PT Cipta Digital</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">RumahKita Properti</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">EduNusantara</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">TokoBaju.co</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">MedikaCare</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">GreenFarm Indonesia</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">Arsitek Muda</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">KulinerJogja</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">PT Cipta Digital</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">RumahKita Properti</span><span class="mq-item accent">✦</span>
+    <span class="mq-item">EduNusantara</span><span class="mq-item accent">✦</span>
+  </div>
+</div>
+
+<!-- LAYANAN -->
+<section id="layanan">
+  <div class="sw" style="padding-top:100px;padding-bottom:100px">
+    <div class="lay-top reveal">
+      <div>
+        <span class="section-lbl">Layanan Kami</span>
+        <h2 class="section-h">Solusi Digital<br><span class="hl">Tepat Sasaran</span></h2>
+      </div>
+      <p class="section-p">Dari website sederhana hingga aplikasi enterprise — kami hadirkan solusi yang sesuai kebutuhan dan anggaran Anda. Konsultasi pertama selalu gratis.</p>
+    </div>
+    <div class="lay-grid reveal">
+      <div class="svc"><span class="svc-no">01</span><span class="svc-ic">🌐</span><h3>Company Profile</h3><p>Website profesional yang mewakili bisnis Anda. Mobile-friendly, cepat, dan SEO-ready dari hari pertama.</p><div class="tag-wrap"><span class="tag tag-w">WordPress</span><span class="tag tag-w">SEO Ready</span><span class="tag tag-w">Mobile First</span></div></div>
+      <div class="svc"><span class="svc-no">02</span><span class="svc-ic">🛒</span><h3>Toko Online</h3><p>Platform e-commerce lengkap dengan manajemen produk, pembayaran otomatis, dan laporan penjualan real-time.</p><div class="tag-wrap"><span class="tag tag-g">WooCommerce</span><span class="tag tag-g">Midtrans</span><span class="tag tag-g">Dashboard</span></div></div>
+      <div class="svc"><span class="svc-no">03</span><span class="svc-ic">📱</span><h3>Aplikasi Custom</h3><p>Sistem internal, CRM, ERP, atau platform khusus industri Anda. Scalable, aman, dan mudah di-maintain.</p><div class="tag-wrap"><span class="tag tag-a">Laravel</span><span class="tag tag-a">React</span><span class="tag tag-a">REST API</span></div></div>
+      <div class="svc"><span class="svc-no">04</span><span class="svc-ic">🔧</span><h3>Maintenance</h3><p>Kami jaga website dan aplikasi Anda tetap prima. Update berkala, backup harian, monitoring keamanan 24/7.</p><div class="tag-wrap"><span class="tag tag-b">Monitoring</span><span class="tag tag-b">SSL</span><span class="tag tag-b">Backup</span></div></div>
+      <div class="svc"><span class="svc-no">05</span><span class="svc-ic">🎯</span><h3>Landing Page</h3><p>Halaman pendaratan yang dioptimasi konversi. Cocok untuk kampanye produk, promo, atau funnel pemasaran.</p><div class="tag-wrap"><span class="tag tag-g">High CVR</span><span class="tag tag-g">A/B Test</span><span class="tag tag-g">Analytics</span></div></div>
+      <div class="svc"><span class="svc-no">06</span><span class="svc-ic">⚡</span><h3>Optimasi SEO</h3><p>Website lambat = pengunjung pergi. Kami optimalkan kecepatan loading dan SEO teknis untuk ranking terbaik.</p><div class="tag-wrap"><span class="tag tag-a">PageSpeed 90+</span><span class="tag tag-a">Core Web Vitals</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<div id="numbers">
+  <div class="num-inner">
+    <div class="num-item reveal"><div class="num-big">120<span>+</span></div><div class="num-lbl">Proyek Selesai</div></div>
+    <div class="num-item reveal" style="transition-delay:.1s"><div class="num-big">98<span>%</span></div><div class="num-lbl">Klien Puas</div></div>
+    <div class="num-item reveal" style="transition-delay:.2s"><div class="num-big">3<span>th</span></div><div class="num-lbl">Pengalaman</div></div>
+    <div class="num-item reveal" style="transition-delay:.3s"><div class="num-big">5<span>★</span></div><div class="num-lbl">Rating Rata-rata</div></div>
+  </div>
+</div>
+
+<!-- PROSES -->
+<section id="proses">
+  <div class="sw" style="padding-top:100px;padding-bottom:100px">
+    <div class="reveal">
+      <span class="section-lbl">Cara Kerja Kami</span>
+      <h2 class="section-h">Proses yang <span class="hl" style="background:var(--yellow);color:var(--ink)">Transparan</span></h2>
+      <p class="section-p">Tidak ada kejutan di tengah jalan. Setiap tahap kami komunikasikan agar Anda tahu perkembangannya.</p>
+    </div>
+    <div class="proses-layout">
+      <div class="step-grid reveal">
+        <div class="step"><div class="step-n">01</div><div><h4>Konsultasi & Brief</h4><p>Kami pelajari bisnis, tujuan, dan anggaran Anda. Gratis, tanpa komitmen.</p></div></div>
+        <div class="step"><div class="step-n">02</div><div><h4>Desain & Wireframe</h4><p>Mockup visual sebelum coding dimulai. Revisi sampai Anda puas.</p></div></div>
+        <div class="step"><div class="step-n">03</div><div><h4>Pengembangan</h4><p>Tim kami bangun dengan kode bersih, terstruktur, mudah di-maintain.</p></div></div>
+        <div class="step"><div class="step-n">04</div><div><h4>Testing & Revisi</h4><p>Pengujian menyeluruh di semua perangkat sebelum live. Revisi termasuk.</p></div></div>
+        <div class="step"><div class="step-n">05</div><div><h4>Launch & Handover</h4><p>Go live! Kami bantu training dan siapkan dokumentasi untuk tim Anda.</p></div></div>
+      </div>
+      <div class="reveal" style="transition-delay:.2s">
+        <div class="tracker">
+          <p class="tracker-lbl">Status Proyek — Contoh Live</p>
+          <div class="trow"><span>📋 Brief & Konsultasi</span><span class="bdg bdg-ok">Selesai</span></div>
+          <div class="trow"><span>🎨 Desain UI/UX</span><span class="bdg bdg-ok">Selesai</span></div>
+          <div class="trow"><span>💻 Pengembangan Frontend</span><span class="bdg bdg-on">Berjalan</span></div>
+          <div class="trow"><span>🔌 Integrasi Backend</span><span class="bdg bdg-q">Menunggu</span></div>
+          <div class="trow"><span>🚀 Testing & Launch</span><span class="bdg bdg-q">Menunggu</span></div>
+          <div class="prog-wrap">
+            <div class="prog-lbl"><span>Progress Keseluruhan</span><span>60%</span></div>
+            <div class="prog-bar"><div class="prog-fill"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTO -->
+<section id="porto">
+  <div class="sw" style="padding-top:100px;padding-bottom:100px">
+    <div class="porto-top reveal">
+      <div><span class="section-lbl">Karya Kami</span><h2 class="section-h">Portofolio <span class="hl">Terpilih</span></h2></div>
+      <a href="#kontak" class="btn-outline">Diskusi Proyek →</a>
+    </div>
+    <div class="porto-grid reveal">
+
+      <div class="pc" onclick="openModal(0)">
+        <div class="pc-thumb pt1">
+          <div class="mb2"><div class="mb2-bar"><span class="mb2-d" style="background:#FF5F57"></span><span class="mb2-d" style="background:#FFBD2E"></span><span class="mb2-d" style="background:#28CA41"></span></div><div class="mb2-body"><div class="mb2-la"></div><div class="mb2-l"></div><div class="mb2-l" style="width:70%"></div><div class="mb2-blk"></div></div></div>
+          <div class="pc-view-hint">👁 Lihat Detail</div>
+        </div>
+        <div class="pc-info"><p class="pc-cat">E-Commerce</p><h3>TokoBaju.co</h3><p>Platform fashion online, 500+ produk, integrasi Midtrans.</p></div>
+      </div>
+
+      <div class="pc" onclick="openModal(1)">
+        <div class="pc-thumb pt2">
+          <div class="mb2"><div class="mb2-bar"><span class="mb2-d" style="background:#FF5F57"></span><span class="mb2-d" style="background:#FFBD2E"></span><span class="mb2-d" style="background:#28CA41"></span></div><div class="mb2-body"><div class="mb2-la"></div><div class="mb2-l"></div><div class="mb2-l" style="width:80%"></div><div class="mb2-blk"></div></div></div>
+          <div class="pc-view-hint">👁 Lihat Detail</div>
+        </div>
+        <div class="pc-info"><p class="pc-cat">Company Profile</p><h3>MedikaCare Klinik</h3><p>Website klinik dengan booking online dan info dokter.</p></div>
+      </div>
+
+      <div class="pc" onclick="openModal(2)">
+        <div class="pc-thumb pt3">
+          <div class="mb2"><div class="mb2-bar"><span class="mb2-d" style="background:#FF5F57"></span><span class="mb2-d" style="background:#FFBD2E"></span><span class="mb2-d" style="background:#28CA41"></span></div><div class="mb2-body"><div class="mb2-la"></div><div class="mb2-l"></div><div class="mb2-l" style="width:60%"></div><div class="mb2-blk"></div></div></div>
+          <div class="pc-view-hint">👁 Lihat Detail</div>
+        </div>
+        <div class="pc-info"><p class="pc-cat">Sistem Internal</p><h3>GreenFarm Distribusi</h3><p>Manajemen stok & distribusi produk pertanian real-time.</p></div>
+      </div>
+
+      <div class="pc" onclick="openModal(3)">
+        <div class="pc-thumb pt4">
+          <div class="mb2"><div class="mb2-bar"><span class="mb2-d" style="background:#FF5F57"></span><span class="mb2-d" style="background:#FFBD2E"></span><span class="mb2-d" style="background:#28CA41"></span></div><div class="mb2-body"><div class="mb2-la"></div><div class="mb2-l"></div><div class="mb2-l" style="width:75%"></div><div class="mb2-blk"></div></div></div>
+          <div class="pc-view-hint">👁 Lihat Detail</div>
+        </div>
+        <div class="pc-info"><p class="pc-cat">Landing Page</p><h3>Arsitek Muda Studio</h3><p>Website portofolio arsitektur dengan galeri & konsultasi.</p></div>
+      </div>
+
+      <div class="pc" onclick="openModal(4)">
+        <div class="pc-thumb pt5">
+          <div class="mb2"><div class="mb2-bar"><span class="mb2-d" style="background:#FF5F57"></span><span class="mb2-d" style="background:#FFBD2E"></span><span class="mb2-d" style="background:#28CA41"></span></div><div class="mb2-body"><div class="mb2-la"></div><div class="mb2-l"></div><div class="mb2-l" style="width:55%"></div><div class="mb2-blk"></div></div></div>
+          <div class="pc-view-hint">👁 Lihat Detail</div>
+        </div>
+        <div class="pc-info"><p class="pc-cat">E-Commerce</p><h3>KulinerJogja</h3><p>Marketplace kuliner lokal multi-vendor + tracking pesanan.</p></div>
+      </div>
+
+      <div class="pc" onclick="openModal(5)">
+        <div class="pc-thumb pt6">
+          <div class="mb2"><div class="mb2-bar"><span class="mb2-d" style="background:#FF5F57"></span><span class="mb2-d" style="background:#FFBD2E"></span><span class="mb2-d" style="background:#28CA41"></span></div><div class="mb2-body"><div class="mb2-la"></div><div class="mb2-l"></div><div class="mb2-l" style="width:85%"></div><div class="mb2-blk"></div></div></div>
+          <div class="pc-view-hint">👁 Lihat Detail</div>
+        </div>
+        <div class="pc-info"><p class="pc-cat">Aplikasi Web</p><h3>EduNusantara LMS</h3><p>Platform belajar online dengan video, kuis, & sertifikat.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MODAL ═══ -->
+<div class="modal-overlay" id="modal" onclick="handleOverlayClick(event)">
+  <div class="modal-box" id="modal-box">
+
+    <!-- Gallery -->
+    <div class="mg" id="mg">
+      <div class="mg-track" id="mg-track"></div>
+      <button class="mg-nav mg-prev" onclick="slide(-1)" aria-label="Sebelumnya">‹</button>
+      <button class="mg-nav mg-next" onclick="slide(1)" aria-label="Berikutnya">›</button>
+      <div class="mg-dots" id="mg-dots"></div>
+      <div class="mg-count" id="mg-count">1 / 3</div>
+    </div>
+
+    <!-- Body -->
+    <div class="mb">
+      <div class="mb-header">
+        <div>
+          <p class="mb-cat" id="md-cat"></p>
+          <h2 class="mb-title" id="md-title"></h2>
+        </div>
+        <button class="mb-close" onclick="closeModal()" aria-label="Tutup">✕</button>
+      </div>
+
+      <p class="mb-desc" id="md-desc"></p>
+
+      <!-- URL -->
+      <div class="mb-url-row" id="md-url-row">
+        <span class="mb-url-ic">🔗</span>
+        <div class="mb-url-info">
+          <p class="mb-url-lbl">URL Proyek</p>
+          <p class="mb-url-val" id="md-url-val"></p>
+        </div>
+        <a class="btn-visit" id="md-url-btn" href="#" target="_blank" rel="noopener">Kunjungi ↗</a>
+      </div>
+
+      <!-- Meta: tech + year -->
+      <div class="mb-meta">
+        <div class="mm-block">
+          <p class="mm-lbl">Tech Stack</p>
+          <div class="tech-stack" id="md-stack"></div>
+        </div>
+        <div class="mm-block">
+          <p class="mm-lbl">Detail Proyek</p>
+          <div id="md-detail" style="display:flex;flex-direction:column;gap:8px"></div>
+        </div>
+      </div>
+
+      <div class="mb-footer">
+        <span class="mb-year" id="md-year"></span>
+        <a href="#kontak" class="btn-cta-modal" onclick="closeModal()">Diskusi Proyek Serupa →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HARGA -->
+<section id="harga" class="dot-bg2">
+  <div class="sw" style="padding-top:100px;padding-bottom:100px">
+    <div class="harga-top reveal">
+      <span class="section-lbl">Paket Harga</span>
+      <h2 class="section-h">Harga <span class="hl">Transparan</span>,<br>Tanpa Biaya Tersembunyi</h2>
+      <p class="section-p">Semua paket sudah termasuk domain .com dan hosting 1 tahun pertama.</p>
+    </div>
+    <div class="harga-grid reveal">
+      <div class="hcard">
+        <p class="hplan">Starter</p>
+        <div class="hprice"><small>Rp</small> 1,5jt</div>
+        <p class="hnote">One-time payment, mulai dari</p>
+        <div class="hdivider"></div>
+        <ul class="hfeats">
+          <li class="hf">Website 5 halaman</li>
+          <li class="hf">Template premium</li>
+          <li class="hf">Mobile responsive</li>
+          <li class="hf">Form kontak & WhatsApp</li>
+          <li class="hf">Basic SEO setup</li>
+          <li class="hf">Revisi hingga 3x</li>
+          <li class="hf mf">Custom desain dari nol</li>
+          <li class="hf mf">Fitur e-commerce</li>
+        </ul>
+        <a href="#kontak" class="btn-hp btn-hp-ol">Pilih Starter</a>
+      </div>
+      <div class="hcard mid">
+        <span class="pop-lbl">⭐ Terpopuler</span>
+        <p class="hplan">Profesional</p>
+        <div class="hprice"><small>Rp</small> 5jt</div>
+        <p class="hnote">One-time payment, mulai dari</p>
+        <div class="hdivider"></div>
+        <ul class="hfeats">
+          <li class="hf">Website hingga 15 halaman</li>
+          <li class="hf">Desain custom dari nol</li>
+          <li class="hf">Toko online (WooCommerce)</li>
+          <li class="hf">Payment gateway</li>
+          <li class="hf">Dashboard admin lengkap</li>
+          <li class="hf">SEO + Sitemap + Schema</li>
+          <li class="hf">Revisi hingga 7x</li>
+          <li class="hf">Training penggunaan</li>
+        </ul>
+        <a href="#kontak" class="btn-hp btn-hp-wh">Pilih Profesional</a>
+      </div>
+      <div class="hcard">
+        <p class="hplan">Enterprise</p>
+        <div class="hprice">Custom</div>
+        <p class="hnote">Disesuaikan kebutuhan proyek</p>
+        <div class="hdivider"></div>
+        <ul class="hfeats">
+          <li class="hf">Aplikasi web custom penuh</li>
+          <li class="hf">Sistem CRM / ERP / LMS</li>
+          <li class="hf">Integrasi API pihak ketiga</li>
+          <li class="hf">Multi-user & role</li>
+          <li class="hf">VPS dedicated</li>
+          <li class="hf">SLA & support prioritas</li>
+          <li class="hf">Revisi tidak terbatas</li>
+          <li class="hf">Kontrak maintenance tahunan</li>
+        </ul>
+        <a href="#kontak" class="btn-hp btn-hp-dk">Diskusi Kebutuhan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTI -->
+<section id="testi" class="dot-bg-white">
+  <div class="sw" style="padding-top:100px;padding-bottom:100px">
+    <div class="testi-top reveal">
+      <div><span class="section-lbl">Apa Kata Klien</span><h2 class="section-h">Mereka <span class="hl">Percaya</span> Kami</h2></div>
+    </div>
+    <div class="testi-grid reveal">
+      <div class="tc"><div class="tc-stars">★★★★★</div><p class="tc-q">"Website toko kami sekarang muncul di halaman 1 Google! Omzet naik 3x dalam 2 bulan pertama setelah pakai jasa Pranata."</p><div class="tc-author"><div class="tc-av av-b">SR</div><div><p class="tc-name">Sari Rahayu</p><p class="tc-role">Owner, TokoBaju.co</p></div></div></div>
+      <div class="tc"><div class="tc-stars">★★★★★</div><p class="tc-q">"Tim sangat responsif dan profesional. Proyek sistem klinik kami selesai tepat waktu dan sesuai ekspektasi."</p><div class="tc-author"><div class="tc-av av-w">DR</div><div><p class="tc-name">dr. Reza Maulana</p><p class="tc-role">Direktur, MedikaCare</p></div></div></div>
+      <div class="tc"><div class="tc-stars">★★★★★</div><p class="tc-q">"Harga sangat terjangkau untuk kualitas yang diberikan. Website kami loading super cepat dan tampilan modern."</p><div class="tc-author"><div class="tc-av av-a">BP</div><div><p class="tc-name">Budi Prakoso</p><p class="tc-role">Pemilik, Arsitek Muda</p></div></div></div>
+      <div class="tc"><div class="tc-stars">★★★★★</div><p class="tc-q">"Aplikasi distribusi kami sudah berjalan 8 bulan tanpa masalah. Support mereka cepat tanggap untuk pertanyaan teknis."</p><div class="tc-author"><div class="tc-av av-g">AW</div><div><p class="tc-name">Andi Wijaya</p><p class="tc-role">CEO, GreenFarm Indonesia</p></div></div></div>
+      <div class="tc"><div class="tc-stars">★★★★★</div><p class="tc-q">"Dari briefing sampai launch hanya 3 minggu! Prosesnya transparan dan hasilnya melampaui semua ekspektasi kami."</p><div class="tc-author"><div class="tc-av av-dk">NL</div><div><p class="tc-name">Nadia Lestari</p><p class="tc-role">Founder, EduNusantara</p></div></div></div>
+      <div class="tc"><div class="tc-stars">★★★★★</div><p class="tc-q">"Landing page iklan kami sekarang punya conversion rate 12%. Sebelumnya cuma 3%. Pranata benar-benar ngerti bisnis."</p><div class="tc-author"><div class="tc-av av-r">HF</div><div><p class="tc-name">Hendra Firmansyah</p><p class="tc-role">Marketing Dir., KulinerJogja</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="sw" style="padding-top:100px;padding-bottom:100px">
+    <div class="faq-layout">
+      <div class="reveal">
+        <span class="section-lbl">FAQ</span>
+        <h2 class="section-h">Pertanyaan <span class="hl">Umum</span></h2>
+        <p class="section-p" style="margin-bottom:28px">Masih punya pertanyaan? Hubungi kami langsung via WhatsApp.</p>
+        <a href="#kontak" class="btn-solid">Tanya Langsung →</a>
+      </div>
+      <div class="faq-list reveal" style="transition-delay:.2s">
+        <div class="faq-item open"><button class="faq-q" onclick="toggleFaq(this)">Berapa lama pengerjaan website? <span class="faq-plus">+</span></button><div class="faq-a"><p class="faq-a-inner">Company profile 5–7 hari kerja, toko online 2–3 minggu, aplikasi custom 1–3 bulan. Estimasi pasti diberikan sebelum proyek mulai.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Apakah ada biaya tambahan setelah selesai? <span class="faq-plus">+</span></button><div class="faq-a"><p class="faq-a-inner">Hanya biaya perpanjangan domain dan hosting tahunan (mulai Rp 300rb/tahun) yang kami kelola. Tidak ada biaya tersembunyi.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Bisa bantu upload dan isi konten? <span class="faq-plus">+</span></button><div class="faq-a"><p class="faq-a-inner">Tentu! Kami bantu isi konten awal, lalu berikan training agar tim Anda bisa update mandiri via dashboard admin.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Apakah website aman dari hacker? <span class="faq-plus">+</span></button><div class="faq-a"><p class="faq-a-inner">Semua website dilengkapi SSL, firewall, plugin keamanan, dan backup otomatis harian. Update rutin untuk menutup celah keamanan terbaru.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Bagaimana proses pembayarannya? <span class="faq-plus">+</span></button><div class="faq-a"><p class="faq-a-inner">DP 50% untuk memulai proyek, pelunasan 50% sebelum live. Untuk proyek enterprise, skema bertahap bisa didiskusikan.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Bisa untuk klien di luar kota? <span class="faq-plus">+</span></button><div class="faq-a"><p class="faq-a-inner">Tentu! Hampir semua proyek dikerjakan remote via WhatsApp, Zoom, atau email. Kami melayani klien dari Sabang sampai Merauke.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <h2>Siap Memulai<br>Proyek Anda?</h2>
+      <p>Konsultasi pertama gratis — tanpa komitmen, tanpa tekanan.</p>
+    </div>
+    <div class="cta-action">
+      <a href="#kontak" class="btn-cta-w">Mulai Sekarang →</a>
+      <p class="cta-note">Respon dalam 1×24 jam kerja</p>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak">
+  <div class="sw" style="padding-top:100px;padding-bottom:100px">
+    <div class="kontak-wrap reveal">
+      <div class="kontak-l">
+        <h2>Ceritakan<br><em>Proyek Anda</em></h2>
+        <p>Kami siap mendengar dan memberikan solusi terbaik untuk bisnis Anda.</p>
+        <div class="ki-list">
+          <div class="ki"><div class="ki-ic">📱</div><div><p class="ki-lbl">WhatsApp</p><p class="ki-val">+62 812-XXXX-XXXX</p></div></div>
+          <div class="ki"><div class="ki-ic">✉️</div><div><p class="ki-lbl">Email</p><p class="ki-val">halo@pranatasolusi.id</p></div></div>
+          <div class="ki"><div class="ki-ic">📍</div><div><p class="ki-lbl">Lokasi</p><p class="ki-val">Jakarta, Indonesia (Remote OK)</p></div></div>
+          <div class="ki"><div class="ki-ic">⏰</div><div><p class="ki-lbl">Jam Kerja</p><p class="ki-val">Senin–Sabtu, 08.00–21.00 WIB</p></div></div>
+        </div>
+      </div>
+      <div class="kontak-r">
+        <h3>Kirim Pesan Sekarang</h3>
+        <div class="frow"><div class="fg"><label>Nama Lengkap</label><input type="text" placeholder="Budi Santoso"></div><div class="fg"><label>Nomor WhatsApp</label><input type="tel" placeholder="+62 812-XXXX-XXXX"></div></div>
+        <div class="fg"><label>Email</label><input type="email" placeholder="email@perusahaan.com"></div>
+        <div class="fg"><label>Jenis Layanan</label><select><option value="">Pilih layanan yang dibutuhkan</option><option>Website Company Profile</option><option>Toko Online / E-Commerce</option><option>Aplikasi Web Custom</option><option>Landing Page</option><option>Maintenance & Support</option><option>Optimasi SEO & Kecepatan</option></select></div>
+        <div class="fg"><label>Ceritakan Kebutuhan Anda</label><textarea placeholder="Deskripsikan proyek: tujuan, fitur, estimasi anggaran, timeline..."></textarea></div>
+        <button class="btn-send" onclick="handleSubmit(this)">Kirim Pesan & Konsultasi Gratis →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="fbrand">
+        <a href="#" class="logo"><div class="logo-mark">P</div><div><div class="logo-name" style="color:#fff">Pranata Solusi Ahli</div><div class="logo-sub">Digital Solutions</div></div></a>
+        <p>Mitra terpercaya untuk transformasi digital bisnis Anda. Website, aplikasi, dan solusi digital yang bekerja.</p>
+        <div class="fsoc"><a href="#" title="Instagram">📸</a><a href="#" title="LinkedIn">💼</a><a href="#" title="Facebook">👥</a><a href="#" title="YouTube">▶️</a></div>
+      </div>
+      <div class="fcol"><h4>Layanan</h4><ul><li><a href="#layanan">Company Profile</a></li><li><a href="#layanan">Toko Online</a></li><li><a href="#layanan">Aplikasi Custom</a></li><li><a href="#layanan">Landing Page</a></li><li><a href="#layanan">Optimasi SEO</a></li></ul></div>
+      <div class="fcol"><h4>Perusahaan</h4><ul><li><a href="#">Tentang Kami</a></li><li><a href="#porto">Portofolio</a></li><li><a href="#testi">Testimoni</a></li><li><a href="#">Blog & Artikel</a></li><li><a href="#kontak">Karir</a></li></ul></div>
+      <div class="fcol"><h4>Bantuan</h4><ul><li><a href="#faq">FAQ</a></li><li><a href="#harga">Harga & Paket</a></li><li><a href="#kontak">Hubungi Kami</a></li><li><a href="#">Syarat & Ketentuan</a></li><li><a href="#">Kebijakan Privasi</a></li></ul></div>
+    </div>
+    <div class="fbot">
+      <p class="fcopy">© 2025 <a href="#">Pranata Solusi Ahli</a>. Semua hak dilindungi.</p>
+      <div class="fleg"><a href="#">Privasi</a><a href="#">Syarat</a><a href="#">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/6281200000000?text=Halo%20Pranata%20Solusi%20Ahli%2C%20saya%20ingin%20konsultasi" class="wa" title="Chat WhatsApp">💬</a>
+
+<script>
+/* ── Intersection reveal ── */
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')}),{threshold:.08,rootMargin:'0px 0px -28px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* ── FAQ ── */
+function toggleFaq(btn){
+  const item=btn.closest('.faq-item'),isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+
+/* ── Nav shrink ── */
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').style.height=window.scrollY>50?'52px':'60px';
+});
+
+/* ── Form submit ── */
+function handleSubmit(btn){
+  btn.textContent='✓ Pesan terkirim! Kami akan menghubungi dalam 1×24 jam.';
+  btn.style.background='#16A34A';btn.style.borderColor='#16A34A';btn.disabled=true;
+}
+
+/* ── Smooth scroll ── */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}
+  });
+});
+
+/* ════════════════════════════════════
+   PORTFOLIO MODAL
+════════════════════════════════════ */
+
+/* Color helpers for mock slides */
+const SLIDE_COLORS = [
+  ['#EEF3FD','#E8F0FD','#DDE8FC'],  // blue family
+  ['#EDFBF3','#E5F9EE','#DDFAEA'],  // green family
+  ['#FEF9EE','#FDF4E0','#FCF0D3'],  // amber family
+  ['#FEF2F2','#FDE8E8','#FCDCDC'],  // red family
+  ['#F0FDF4','#E4FAEC','#D8F7E5'],  // teal family
+  ['#EEF3FD','#E8F0FD','#DDE8FC'],  // blue family
+];
+
+const PROJECTS = [
+  {
+    id: 0,
+    cat: 'E-Commerce',
+    title: 'TokoBaju.co',
+    desc: 'Platform e-commerce fashion online lengkap dengan lebih dari 500 produk aktif, sistem manajemen inventori real-time, wishlist, review produk, dan kupon diskon. Integrasi payment gateway Midtrans mendukung transfer bank, kartu kredit, QRIS, dan dompet digital. SEO dioptimasi hingga menduduki halaman 1 Google untuk kata kunci kategori fashion lokal.',
+    url: 'https://tokobaju.co',
+    year: '2024',
+    duration: '6 minggu',
+    slides: 3,
+    stack: [
+      {label:'WordPress',color:'blue'},
+      {label:'WooCommerce',color:'blue'},
+      {label:'PHP 8',color:'ink'},
+      {label:'MySQL',color:'amber'},
+      {label:'Midtrans',color:'green'},
+      {label:'Redis Cache',color:'amber'},
+      {label:'Cloudflare CDN',color:'yellow'},
+    ],
+    detail: [
+      {icon:'📅', label:'Tahun', val:'2024'},
+      {icon:'⏱', label:'Durasi', val:'6 minggu'},
+      {icon:'👤', label:'Klien', val:'UMKM Fashion'},
+      {icon:'📄', label:'Halaman', val:'35+ halaman'},
+    ]
+  },
+  {
+    id: 1,
+    cat: 'Company Profile',
+    title: 'MedikaCare Klinik',
+    desc: 'Website profesional klinik kesehatan dengan fitur booking appointment online, profil lengkap dokter spesialis beserta jadwal praktik, informasi layanan medis, galeri fasilitas, dan formulir konsultasi. Dioptimasi untuk pencarian lokal (Google Maps & Local SEO) sehingga muncul di hasil pencarian area kota. Tersedia pula fitur chat WhatsApp langsung dari setiap halaman.',
+    url: 'https://medikacare.id',
+    year: '2024',
+    duration: '3 minggu',
+    slides: 3,
+    stack: [
+      {label:'WordPress',color:'blue'},
+      {label:'Elementor Pro',color:'blue'},
+      {label:'ACF',color:'amber'},
+      {label:'Yoast SEO',color:'green'},
+      {label:'WP Rocket',color:'yellow'},
+      {label:'SSL',color:'ink'},
+    ],
+    detail: [
+      {icon:'📅', label:'Tahun', val:'2024'},
+      {icon:'⏱', label:'Durasi', val:'3 minggu'},
+      {icon:'👤', label:'Klien', val:'Klinik Kesehatan'},
+      {icon:'📄', label:'Halaman', val:'12 halaman'},
+    ]
+  },
+  {
+    id: 2,
+    cat: 'Sistem Internal',
+    title: 'GreenFarm Distribusi',
+    desc: 'Aplikasi manajemen distribusi produk pertanian berbasis web untuk mengotomatisasi alur stok dari gudang ke distributor hingga pengecer. Fitur utama: dashboard stok real-time, manajemen order, laporan distribusi harian/mingguan, notifikasi stok menipis via WhatsApp API, dan manajemen multi-gudang. Mengurangi kesalahan distribusi hingga 87% dibanding sistem manual sebelumnya.',
+    url: null,
+    year: '2023',
+    duration: '10 minggu',
+    slides: 3,
+    stack: [
+      {label:'Laravel 10',color:'ink'},
+      {label:'Vue.js 3',color:'green'},
+      {label:'MySQL',color:'amber'},
+      {label:'Inertia.js',color:'blue'},
+      {label:'WhatsApp API',color:'green'},
+      {label:'Chart.js',color:'yellow'},
+      {label:'Redis',color:'amber'},
+    ],
+    detail: [
+      {icon:'📅', label:'Tahun', val:'2023'},
+      {icon:'⏱', label:'Durasi', val:'10 minggu'},
+      {icon:'👤', label:'Klien', val:'Distributor Pertanian'},
+      {icon:'🔐', label:'Akses', val:'Private / Internal'},
+    ]
+  },
+  {
+    id: 3,
+    cat: 'Landing Page',
+    title: 'Arsitek Muda Studio',
+    desc: 'Website portofolio studio arsitektur dengan galeri proyek interaktif, filter berdasarkan kategori (residential, komersial, renovasi), tampilan full-screen lightbox, dan formulir konsultasi proyek. Desain premium dengan animasi scroll yang halus mencerminkan identitas studio yang modern dan premium. Bounce rate turun 40% dan waktu kunjungan naik 2,5x setelah diluncurkan.',
+    url: 'https://arsitekmuda.com',
+    year: '2024',
+    duration: '4 minggu',
+    slides: 3,
+    stack: [
+      {label:'HTML5',color:'amber'},
+      {label:'CSS3',color:'blue'},
+      {label:'JavaScript',color:'yellow'},
+      {label:'GSAP',color:'green'},
+      {label:'PHP Mailer',color:'ink'},
+      {label:'Netlify',color:'blue'},
+    ],
+    detail: [
+      {icon:'📅', label:'Tahun', val:'2024'},
+      {icon:'⏱', label:'Durasi', val:'4 minggu'},
+      {icon:'👤', label:'Klien', val:'Studio Arsitektur'},
+      {icon:'📄', label:'Halaman', val:'1 halaman panjang'},
+    ]
+  },
+  {
+    id: 4,
+    cat: 'E-Commerce',
+    title: 'KulinerJogja',
+    desc: 'Marketplace kuliner lokal Yogyakarta dengan sistem multi-vendor yang memungkinkan ratusan pedagang mendaftar dan mengelola toko masing-masing. Fitur: pencarian dan filter menu, tracking pesanan live, ulasan pembeli, dashboard pendapatan per vendor, dan laporan penjualan. Integrasi dengan GoPay, OVO, dan QRIS. Berhasil menghubungkan 200+ UMKM kuliner lokal dengan konsumen digital.',
+    url: 'https://kulinerjogja.id',
+    year: '2023',
+    duration: '14 minggu',
+    slides: 3,
+    stack: [
+      {label:'Laravel 10',color:'ink'},
+      {label:'React.js',color:'blue'},
+      {label:'MySQL',color:'amber'},
+      {label:'Filament Admin',color:'blue'},
+      {label:'GoPay API',color:'green'},
+      {label:'Pusher',color:'yellow'},
+      {label:'AWS S3',color:'amber'},
+    ],
+    detail: [
+      {icon:'📅', label:'Tahun', val:'2023'},
+      {icon:'⏱', label:'Durasi', val:'14 minggu'},
+      {icon:'👤', label:'Klien', val:'Startup Kuliner'},
+      {icon:'🏪', label:'Vendor', val:'200+ pedagang'},
+    ]
+  },
+  {
+    id: 5,
+    cat: 'Aplikasi Web',
+    title: 'EduNusantara LMS',
+    desc: 'Learning Management System (LMS) lengkap untuk platform pendidikan online. Fitur meliputi: streaming video kursus dengan DRM, materi PDF, kuis interaktif, sertifikat digital bertanda tangan QR, forum diskusi per kursus, progres belajar, dan dashboard instruktur. Mendukung ratusan siswa simultan dengan infrastruktur cloud yang scalable. Sudah digunakan oleh 5.000+ pelajar aktif.',
+    url: 'https://edunusantara.id',
+    year: '2024',
+    duration: '16 minggu',
+    slides: 3,
+    stack: [
+      {label:'Laravel 11',color:'ink'},
+      {label:'Vue.js 3',color:'green'},
+      {label:'PostgreSQL',color:'blue'},
+      {label:'FFmpeg',color:'amber'},
+      {label:'Bunny.net CDN',color:'yellow'},
+      {label:'Laravel Queue',color:'ink'},
+      {label:'Stripe',color:'blue'},
+    ],
+    detail: [
+      {icon:'📅', label:'Tahun', val:'2024'},
+      {icon:'⏱', label:'Durasi', val:'16 minggu'},
+      {icon:'👤', label:'Klien', val:'Platform Edtech'},
+      {icon:'🎓', label:'Siswa', val:'5.000+ aktif'},
+    ]
+  },
+];
+
+/* ── State ── */
+let currentSlide = 0;
+let totalSlides  = 0;
+
+/* ── Build mock slide ── */
+function buildSlide(idx, slideIdx, colors) {
+  const bg = colors[slideIdx % colors.length];
+  const accents = [
+    `<div class="mg-mock"><div class="mg-mock-bar"><div class="mg-mock-dots"><span style="background:#FF5F57"></span><span style="background:#FFBD2E"></span><span style="background:#28CA41"></span></div><div class="mg-mock-url"></div></div><div class="mg-mock-body"><div class="mg-mock-h1"></div><div class="mg-mock-h2"></div><div class="mg-mock-h3"></div><div class="mg-mock-blk"></div><div class="mg-mock-row"><div class="mg-mock-c"></div><div class="mg-mock-c"></div><div class="mg-mock-c"></div></div></div></div>`,
+    `<div class="mg-mock" style="transform:rotate(-1.5deg)"><div class="mg-mock-bar"><div class="mg-mock-dots"><span style="background:#FF5F57"></span><span style="background:#FFBD2E"></span><span style="background:#28CA41"></span></div><div class="mg-mock-url"></div></div><div class="mg-mock-body"><div class="mg-mock-h1" style="width:80%"></div><div class="mg-mock-h2"></div><div class="mg-mock-blk" style="height:72px"></div></div></div>`,
+    `<div class="mg-mock" style="transform:rotate(1deg)"><div class="mg-mock-bar"><div class="mg-mock-dots"><span style="background:#FF5F57"></span><span style="background:#FFBD2E"></span><span style="background:#28CA41"></span></div><div class="mg-mock-url"></div></div><div class="mg-mock-body"><div class="mg-mock-h1" style="width:55%"></div><div class="mg-mock-h3"></div><div class="mg-mock-row"><div class="mg-mock-c"></div><div class="mg-mock-c"></div></div><div class="mg-mock-blk" style="height:40px;margin-top:6px"></div></div></div>`,
+  ];
+  return `<div class="mg-slide" style="background:${bg}">${accents[slideIdx % accents.length]}</div>`;
+}
+
+/* ── Open modal ── */
+function openModal(idx) {
+  const p = PROJECTS[idx];
+  const colors = SLIDE_COLORS[idx];
+  currentSlide = 0;
+  totalSlides  = p.slides;
+
+  // Gallery
+  const track = document.getElementById('mg-track');
+  const dotsEl = document.getElementById('mg-dots');
+  track.innerHTML = '';
+  dotsEl.innerHTML = '';
+  for (let i = 0; i < p.slides; i++) {
+    track.innerHTML += buildSlide(idx, i, colors);
+    const dot = document.createElement('button');
+    dot.className = 'mg-dot' + (i===0?' active':'');
+    dot.setAttribute('aria-label', `Slide ${i+1}`);
+    dot.onclick = (e) => { e.stopPropagation(); goTo(i); };
+    dotsEl.appendChild(dot);
+  }
+  updateSlider();
+
+  // Text
+  document.getElementById('md-cat').textContent   = p.cat;
+  document.getElementById('md-title').textContent = p.title;
+  document.getElementById('md-desc').textContent  = p.desc;
+
+  // URL
+  const urlRow = document.getElementById('md-url-row');
+  const urlVal = document.getElementById('md-url-val');
+  const urlBtn = document.getElementById('md-url-btn');
+  if (p.url) {
+    urlRow.classList.remove('no-url');
+    urlVal.textContent = p.url;
+    urlBtn.href = p.url;
+  } else {
+    urlRow.classList.add('no-url');
+    urlVal.textContent = 'URL tidak dipublikasikan (proyek internal)';
+  }
+
+  // Stack
+  const stackEl = document.getElementById('md-stack');
+  stackEl.innerHTML = p.stack.map(t=>`<span class="tech-tag ${t.color}">${t.label}</span>`).join('');
+
+  // Detail
+  const detailEl = document.getElementById('md-detail');
+  detailEl.innerHTML = p.detail.map(d=>`
+    <div style="display:flex;align-items:center;gap:8px">
+      <span style="font-size:14px">${d.icon}</span>
+      <div>
+        <div style="font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--ink3)">${d.label}</div>
+        <div style="font-size:13px;font-weight:700;color:var(--ink)">${d.val}</div>
+      </div>
+    </div>`).join('');
+
+  document.getElementById('md-year').textContent = `Proyek ${p.year}`;
+
+  // Show
+  const overlay = document.getElementById('modal');
+  overlay.classList.add('open');
+  document.getElementById('modal-box').scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+}
+
+/* ── Close ── */
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modal')) closeModal();
+}
+
+/* ── Slider ── */
+function goTo(n) {
+  currentSlide = (n + totalSlides) % totalSlides;
+  updateSlider();
+}
+function slide(dir) { goTo(currentSlide + dir); }
+function updateSlider() {
+  document.getElementById('mg-track').style.transform = `translateX(-${currentSlide * 100}%)`;
+  document.getElementById('mg-count').textContent = `${currentSlide+1} / ${totalSlides}`;
+  document.querySelectorAll('.mg-dot').forEach((d,i)=> d.classList.toggle('active', i===currentSlide));
+}
+
+/* ── Keyboard ── */
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('modal').classList.contains('open')) return;
+  if (e.key === 'Escape') closeModal();
+  if (e.key === 'ArrowLeft')  slide(-1);
+  if (e.key === 'ArrowRight') slide(1);
+});
+
+/* ── Touch swipe on gallery ── */
+let touchStartX = 0;
+document.getElementById('mg-track').addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, {passive:true});
+document.getElementById('mg-track').addEventListener('touchend',   e => {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  if (Math.abs(dx) > 40) slide(dx < 0 ? 1 : -1);
+}, {passive:true});
+</script>
+</body>
+</html>
